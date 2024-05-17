@@ -1,0 +1,46 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ex2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE0F.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/ex2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\Administrator\桌面\吴从周\VC\sunxin\ex2\ex2.cpp"
+"C:\Documents and Settings\Administrator\桌面\吴从周\VC\sunxin\ex2\ex2Doc.cpp"
+"C:\Documents and Settings\Administrator\桌面\吴从周\VC\sunxin\ex2\ex2View.cpp"
+"C:\Documents and Settings\Administrator\桌面\吴从周\VC\sunxin\ex2\MainFrm.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE0F.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE10.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/ex2.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\Administrator\桌面\吴从周\VC\sunxin\ex2\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE10.tmp" 
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+ex2.cpp
+ex2Doc.cpp
+ex2View.cpp
+MainFrm.cpp
+Generating Code...
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/ex2.pdb" /debug /machine:I386 /out:"Debug/ex2.exe" /pdbtype:sept  ".\Debug\ex2.obj" ".\Debug\ex2Doc.obj" ".\Debug\ex2View.obj" ".\Debug\MainFrm.obj" ".\Debug\StdAfx.obj" ".\Debug\ex2.res" "
+<h3>Output Window</h3>
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/ex2.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\ex2.sbr" ".\Debug\ex2Doc.sbr" ".\Debug\ex2View.sbr" ".\Debug\MainFrm.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+ex2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

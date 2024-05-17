@@ -1,2 +1,3 @@
-./ex1/Debug/
-./ex1/Release/
+/*/Debug
+/*/Release
+**.swp
