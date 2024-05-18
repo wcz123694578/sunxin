@@ -20,8 +20,7 @@ IMPLEMENT_DYNCREATE(CEx2View, CView)
 
 BEGIN_MESSAGE_MAP(CEx2View, CView)
 	//{{AFX_MSG_MAP(CEx2View)
-		// NOTE - the ClassWizard will add and remove mapping macros here.
-		//    DO NOT EDIT what you see in these blocks of generated code!
+	ON_WM_CREATE()
 	//}}AFX_MSG_MAP
 	// Standard printing commands
 	ON_COMMAND(ID_FILE_PRINT, CView::OnFilePrint)
@@ -102,3 +101,16 @@ CEx2Doc* CEx2View::GetDocument() // non-debug version is inline
 
 /////////////////////////////////////////////////////////////////////////////
 // CEx2View message handlers
+
+int CEx2View::OnCreate(LPCREATESTRUCT lpCreateStruct) 
+{
+	if (CView::OnCreate(lpCreateStruct) == -1)
+		return -1;
+	
+	// TODO: Add your specialized creation code here
+	m_btn.Create("ÎÒµÄ°´Å¥", WS_VISIBLE | WS_CHILD | BS_AUTORADIOBUTTON, 
+				CRect(0, 0, 100, 100), this, 123);
+	// m_btn.ShowWindow(SW_SHOWNORMAL);
+
+	return 0;
+}

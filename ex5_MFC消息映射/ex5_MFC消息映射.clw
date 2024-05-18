@@ -5,13 +5,13 @@ Version=1
 LastClass=CAboutDlg
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
-NewFileInclude2=#include "ex2.h"
+NewFileInclude2=#include "ex5_MFC消息映射.h"
 LastPage=0
 
 ClassCount=9
-Class1=CEx2App
-Class2=CEx2Doc
-Class3=CEx2View
+Class1=CEx5_MFCApp
+Class2=CEx5_MFCDoc
+Class3=CEx5_MFCView
 Class4=CMainFrame
 Class9=CAboutDlg
 
@@ -19,22 +19,22 @@ ResourceCount=2
 Resource1=IDR_MAINFRAME
 Resource2=IDD_ABOUTBOX
 
-[CLS:CEx2App]
+[CLS:CEx5_MFCApp]
 Type=0
-HeaderFile=ex2.h
-ImplementationFile=ex2.cpp
+HeaderFile=ex5_MFC消息映射.h
+ImplementationFile=ex5_MFC消息映射.cpp
 Filter=N
 
-[CLS:CEx2Doc]
+[CLS:CEx5_MFCDoc]
 Type=0
-HeaderFile=ex2Doc.h
-ImplementationFile=ex2Doc.cpp
+HeaderFile=ex5_MFC消息映射Doc.h
+ImplementationFile=ex5_MFC消息映射Doc.cpp
 Filter=N
 
-[CLS:CEx2View]
+[CLS:CEx5_MFCView]
 Type=0
-HeaderFile=ex2View.h
-ImplementationFile=ex2View.cpp
+HeaderFile=ex5_MFC消息映射View.h
+ImplementationFile=ex5_MFC消息映射View.cpp
 Filter=C
 BaseClass=CView
 VirtualFilter=VWC
@@ -45,14 +45,16 @@ Type=0
 HeaderFile=MainFrm.h
 ImplementationFile=MainFrm.cpp
 Filter=T
+BaseClass=CFrameWnd
+VirtualFilter=fWC
 
 
 
 
 [CLS:CAboutDlg]
 Type=0
-HeaderFile=ex2.cpp
-ImplementationFile=ex2.cpp
+HeaderFile=ex5_MFC消息映射.cpp
+ImplementationFile=ex5_MFC消息映射.cpp
 Filter=D
 
 [DLG:IDD_ABOUTBOX]

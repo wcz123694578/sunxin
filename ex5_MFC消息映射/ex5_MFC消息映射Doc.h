@@ -1,20 +1,20 @@
-// MainFrm.h : interface of the CMainFrame class
+// ex5_MFCÏûÏ¢Ó³ÉäDoc.h : interface of the CEx5_MFCDoc class
 //
 /////////////////////////////////////////////////////////////////////////////
 
-#if !defined(AFX_MAINFRM_H__2927F039_FECF_4390_82F5_DBDC5B9404A5__INCLUDED_)
-#define AFX_MAINFRM_H__2927F039_FECF_4390_82F5_DBDC5B9404A5__INCLUDED_
+#if !defined(AFX_EX5_MFCDOC_H__4CEDC3CD_BEBF_4552_A961_95F807AB1BEE__INCLUDED_)
+#define AFX_EX5_MFCDOC_H__4CEDC3CD_BEBF_4552_A961_95F807AB1BEE__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
 
-class CMainFrame : public CFrameWnd
+
+class CEx5_MFCDoc : public CDocument
 {
-	
 protected: // create from serialization only
-	CMainFrame();
-	DECLARE_DYNCREATE(CMainFrame)
+	CEx5_MFCDoc();
+	DECLARE_DYNCREATE(CEx5_MFCDoc)
 
 // Attributes
 public:
@@ -24,32 +24,29 @@ public:
 
 // Overrides
 	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CMainFrame)
-	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+	//{{AFX_VIRTUAL(CEx5_MFCDoc)
+	public:
+	virtual BOOL OnNewDocument();
+	virtual void Serialize(CArchive& ar);
 	//}}AFX_VIRTUAL
 
 // Implementation
 public:
-	virtual ~CMainFrame();
+	virtual ~CEx5_MFCDoc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
 #endif
 
-protected:  // control bar embedded members
-	CStatusBar  m_wndStatusBar;
-	CToolBar    m_wndToolBar;
+protected:
 
 // Generated message map functions
 protected:
-	//{{AFX_MSG(CMainFrame)
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	//{{AFX_MSG(CEx5_MFCDoc)
 		// NOTE - the ClassWizard will add and remove member functions here.
-		//    DO NOT EDIT what you see in these blocks of generated code!
+		//    DO NOT EDIT what you see in these blocks of generated code !
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
-private:
-	// CButton m_btn;
 };
 
 /////////////////////////////////////////////////////////////////////////////
@@ -57,4 +54,4 @@ private:
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#endif // !defined(AFX_MAINFRM_H__2927F039_FECF_4390_82F5_DBDC5B9404A5__INCLUDED_)
+#endif // !defined(AFX_EX5_MFCDOC_H__4CEDC3CD_BEBF_4552_A961_95F807AB1BEE__INCLUDED_)

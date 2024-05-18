@@ -2,10 +2,9 @@
 //
 
 #include "stdafx.h"
-#include "ex2.h"
+#include "ex5_MFC消息映射.h"
 
 #include "MainFrm.h"
-#include <windows.h>
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -20,8 +19,6 @@ IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)
 
 BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	//{{AFX_MSG_MAP(CMainFrame)
-		// NOTE - the ClassWizard will add and remove mapping macros here.
-		//    DO NOT EDIT what you see in these blocks of generated code !
 	ON_WM_CREATE()
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
@@ -39,7 +36,8 @@ static UINT indicators[] =
 
 CMainFrame::CMainFrame()
 {
-	// TODO: add member initialization code here	
+	// TODO: add member initialization code here
+	
 }
 
 CMainFrame::~CMainFrame()
@@ -73,10 +71,6 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	EnableDocking(CBRS_ALIGN_ANY);
 	DockControlBar(&m_wndToolBar);
 
-// 	m_btn.Create("我的按钮", WS_CHILD | BS_DEFPUSHBUTTON, 
-// 				CRect(0, 0, 100, 100), this, 123);
-// 	m_btn.ShowWindow(SW_SHOWNORMAL);
-
 	return 0;
 }
 
@@ -109,3 +103,10 @@ void CMainFrame::Dump(CDumpContext& dc) const
 /////////////////////////////////////////////////////////////////////////////
 // CMainFrame message handlers
 
+
+//DEL void CMainFrame::OnLButtonDown(UINT nFlags, CPoint point) 
+//DEL {
+//DEL 	// TODO: Add your message handler code here and/or call default
+//DEL 	MessageBox(TEXT("button from CMainFrame"));
+//DEL 	CFrameWnd::OnLButtonDown(nFlags, point);
+//DEL }

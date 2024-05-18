@@ -1,31 +1,31 @@
-// ex2View.h : interface of the CEx2View class
+// ex5_MFC消息映射View.h : interface of the CEx5_MFCView class
 //
 /////////////////////////////////////////////////////////////////////////////
 
-#if !defined(AFX_EX2VIEW_H__6B6E9D05_C254_46B3_9AA3_2403E9D7A1E7__INCLUDED_)
-#define AFX_EX2VIEW_H__6B6E9D05_C254_46B3_9AA3_2403E9D7A1E7__INCLUDED_
+#if !defined(AFX_EX5_MFCVIEW_H__748D87C7_CB12_467A_AAE8_5557B9632464__INCLUDED_)
+#define AFX_EX5_MFCVIEW_H__748D87C7_CB12_467A_AAE8_5557B9632464__INCLUDED_
 
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
 
 
-class CEx2View : public CView
+class CEx5_MFCView : public CView
 {
 protected: // create from serialization only
-	CEx2View();
-	DECLARE_DYNCREATE(CEx2View)
+	CEx5_MFCView();
+	DECLARE_DYNCREATE(CEx5_MFCView)
 
 // Attributes
 public:
-	CEx2Doc* GetDocument();
+	CEx5_MFCDoc* GetDocument();
 
 // Operations
 public:
 
 // Overrides
 	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(CEx2View)
+	//{{AFX_VIRTUAL(CEx5_MFCView)
 	public:
 	virtual void OnDraw(CDC* pDC);  // overridden to draw this view
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -37,7 +37,7 @@ public:
 
 // Implementation
 public:
-	virtual ~CEx2View();
+	virtual ~CEx5_MFCView();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
@@ -47,18 +47,21 @@ protected:
 
 // Generated message map functions
 protected:
-	//{{AFX_MSG(CEx2View)
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	//{{AFX_MSG(CEx5_MFCView)
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
+	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
-
 private:
-	CButton m_btn;
+	BOOL m_bDraw;
+	CPoint m_pOrigin;
+	CPoint m_pOld;
 };
 
-#ifndef _DEBUG  // debug version in ex2View.cpp
-inline CEx2Doc* CEx2View::GetDocument()
-   { return (CEx2Doc*)m_pDocument; }
+#ifndef _DEBUG  // debug version in ex5_MFC消息映射View.cpp
+inline CEx5_MFCDoc* CEx5_MFCView::GetDocument()
+   { return (CEx5_MFCDoc*)m_pDocument; }
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
@@ -66,4 +69,4 @@ inline CEx2Doc* CEx2View::GetDocument()
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#endif // !defined(AFX_EX2VIEW_H__6B6E9D05_C254_46B3_9AA3_2403E9D7A1E7__INCLUDED_)
+#endif // !defined(AFX_EX5_MFCVIEW_H__748D87C7_CB12_467A_AAE8_5557B9632464__INCLUDED_)
